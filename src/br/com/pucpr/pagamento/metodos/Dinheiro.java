@@ -1,4 +1,6 @@
-package br.com.pucpr.pagamento;
+package br.com.pucpr.pagamento.metodos;
+
+import br.com.pucpr.pagamento.metodos.definicaoStrategy.PagamentoStrategy;
 
 public class Dinheiro implements PagamentoStrategy {
 

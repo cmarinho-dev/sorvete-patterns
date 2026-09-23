@@ -1,5 +1,7 @@
 package br.com.pucpr.pagamento;
 
+import br.com.pucpr.pagamento.metodos.definicaoStrategy.PagamentoStrategy;
+
 public class Pagamento {
     private PagamentoStrategy strategy;
 

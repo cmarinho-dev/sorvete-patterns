@@ -1,7 +1,7 @@
 package br.com.pucpr.adicionais;
 
-import br.com.pucpr.Sorvete;
-import br.com.pucpr.SorveteDecorator;
+import br.com.pucpr.produtos.Sorvete;
+import br.com.pucpr.adicionais.definicaoDecorator.SorveteDecorator;
 
 public class Nutella extends SorveteDecorator {
     public Nutella(Sorvete sorvete) {

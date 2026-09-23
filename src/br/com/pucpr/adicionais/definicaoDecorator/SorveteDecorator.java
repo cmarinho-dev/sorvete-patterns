@@ -1,4 +1,6 @@
-package br.com.pucpr;
+package br.com.pucpr.adicionais.definicaoDecorator;
+
+import br.com.pucpr.produtos.Sorvete;
 
 public abstract class SorveteDecorator implements Sorvete {
     protected Sorvete sorvete;

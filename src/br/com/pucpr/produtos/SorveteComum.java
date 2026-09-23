@@ -1,4 +1,4 @@
-package br.com.pucpr;
+package br.com.pucpr.produtos;
 
 public class SorveteComum implements Sorvete{
     @Override
