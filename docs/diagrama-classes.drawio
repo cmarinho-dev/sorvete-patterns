@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" modified="2026-09-24T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="diagrama-classes" name="Diagrama de Classes">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="titulo" value="SORVETERIA PATTERNS - DIAGRAMA DE CLASSES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1f2937" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="760" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sorvete" value="&lt;&lt;interface&gt;&gt;&lt;br&gt;&lt;b&gt;Sorvete&lt;/b&gt;&lt;hr&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double&lt;br&gt;+ getDataHoraCriacao(): String&lt;br&gt;+ getPagamento(): Pagamento&lt;br&gt;+ setPagamento(p: Pagamento): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="330" height="170" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sorveteComum" value="&lt;b&gt;SorveteComum&lt;/b&gt;&lt;hr&gt;- dataHoraCriacao: LocalDateTime&lt;br&gt;- pagamento: Pagamento&lt;hr&gt;+ SorveteComum()&lt;br&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double&lt;br&gt;+ getDataHoraCriacao(): String&lt;br&gt;+ getPagamento(): Pagamento&lt;br&gt;+ setPagamento(p): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="190" y="350" width="350" height="190" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decorator" value="&lt;&lt;abstract&gt;&gt;&lt;br&gt;&lt;b&gt;SorveteDecorator&lt;/b&gt;&lt;hr&gt;# sorvete: Sorvete&lt;hr&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double&lt;br&gt;+ getDataHoraCriacao(): String&lt;br&gt;+ getPagamento(): Pagamento&lt;br&gt;+ setPagamento(p): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="650" y="350" width="350" height="190" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="caldaChocolate" value="&lt;b&gt;CaldaChocolate&lt;/b&gt;&lt;hr&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="30" y="700" width="220" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="caldaMorango" value="&lt;b&gt;CaldaMorango&lt;/b&gt;&lt;hr&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="280" y="700" width="220" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="granulado" value="&lt;b&gt;Granulado&lt;/b&gt;&lt;hr&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="530" y="700" width="220" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="nutella" value="&lt;b&gt;Nutella&lt;/b&gt;&lt;hr&gt;+ getDescricao(): String&lt;br&gt;+ getPreco(): double" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="780" y="700" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="pagamento" value="&lt;b&gt;Pagamento&lt;/b&gt;&lt;hr&gt;- strategy: PagamentoStrategy&lt;br&gt;- pago: boolean&lt;hr&gt;+ Pagamento(strategy)&lt;br&gt;+ pagar(valor: double): void&lt;br&gt;+ isPago(): boolean" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="1110" y="350" width="330" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="strategy" value="&lt;&lt;interface&gt;&gt;&lt;br&gt;&lt;b&gt;PagamentoStrategy&lt;/b&gt;&lt;hr&gt;+ pagar(valor: double): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="1110" y="590" width="330" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="credito" value="&lt;b&gt;CartaoCredito&lt;/b&gt;&lt;hr&gt;+ pagar(valor: double): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="1030" y="820" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="debito" value="&lt;b&gt;CartaoDebito&lt;/b&gt;&lt;hr&gt;+ pagar(valor: double): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="1240" y="820" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="dinheiro" value="&lt;b&gt;Dinheiro&lt;/b&gt;&lt;hr&gt;+ pagar(valor: double): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="1450" y="820" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="pix" value="&lt;b&gt;Pix&lt;/b&gt;&lt;hr&gt;+ pagar(valor: double): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="1660" y="820" width="190" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="casos" value="&lt;b&gt;CasosDeUso&lt;/b&gt;&lt;hr&gt;- sorvetes: ArrayList&lt;Sorvete&gt;&lt;hr&gt;+ criarSorvete(): void&lt;br&gt;+ receberPagamento(): void&lt;br&gt;+ listarPedidos(): void&lt;br&gt;+ listarPedidosNaoPagos(): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="380" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="main" value="&lt;b&gt;Main&lt;/b&gt;&lt;hr&gt;+ main(args: String[]): void&lt;br&gt;+ test(): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;align=left;spacingLeft=10;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="30" y="350" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="sorveteComum" target="sorvete"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="decorator" target="sorvete"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="decorates" style="endArrow=open;dashed=0;html=1;strokeWidth=1.5" edge="1" parent="1" source="decorator" target="sorvete"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="extends" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="caldaChocolate" target="decorator"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="extends" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="caldaMorango" target="decorator"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" value="extends" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="granulado" target="decorator"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" value="extends" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="nutella" target="decorator"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" value="possui" style="endArrow=diamond;endFill=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="sorveteComum" target="pagamento"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" value="usa" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="pagamento" target="strategy"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="credito" target="strategy"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="debito" target="strategy"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e12" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="dinheiro" target="strategy"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=1.5" edge="1" parent="1" source="pix" target="strategy"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e14" value="gerencia" style="endArrow=open;html=1;strokeWidth=1.5" edge="1" parent="1" source="casos" target="sorveteComum"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e15" value="cria" style="endArrow=open;html=1;strokeWidth=1.5" edge="1" parent="1" source="main" target="casos"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
